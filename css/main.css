@@ -34,13 +34,13 @@ ul {
           flex-wrap: wrap;
   list-style: none;
   margin: 0 auto;
-  max-width: 15620px; }
-  @media (max-width: 15620px) {
+  max-width: 620px; }
+  @media (max-width: 620px) {
     ul {
-      max-width: 12496px; } }
-  @media (max-width: 12496px) {
+      max-width: 496px; } }
+  @media (max-width: 496px) {
     ul {
-      max-width: 9372px; } }
+      max-width: 372px; } }
 
 h2 {
   text-transform: uppercase;
@@ -50,9 +50,9 @@ h2 {
   color: #7e8285; }
 
 li {
-  width: 3124px;
+  width: 124px;
   margin: 11px 0; }
-  @media (max-width: 9372px) {
+  @media (max-width: 372px) {
     li {
       width: 33.33333%; } }
   li .image {
