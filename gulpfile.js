@@ -6,23 +6,17 @@ var sequence = require('run-sequence')
 var exec     = require('child_process').exec
 
 var paths = {
-  source_css: '_scss/*.scss',
-  source_js:  '_js/*.js',
-  build_css:  '_site/css',
-  build_js:   '_site/js'
+  source_scss: '_scss/*.scss',
+  source_css:  'css',
+  build_css:  '_site/css'
 }
 
 gulp.task('sass', function() {
-  return gulp.src(paths.source_css)
+  return gulp.src(paths.source_scss)
     .pipe(sass().on('error', sass.logError))
     .pipe(prefix())
+    .pipe(gulp.dest(paths.source_css))
     .pipe(gulp.dest(paths.build_css))
-    .pipe(sync.reload({ stream: true }))
-})
-
-gulp.task("scripts", function() {
-  return gulp.src(paths.source_js)
-    .pipe(gulp.dest(paths.build_js))
     .pipe(sync.reload({ stream: true }))
 })
 
@@ -39,14 +33,13 @@ gulp.task('build', function(cb) {
     console.log(stdout)
     console.log(stderr)
     cb(err)
-    sequence(['sass', 'scripts'])
+    sequence('sass')
     sync.reload()
   })
 })
 
 gulp.task('watch', function() {
   gulp.watch(paths.source_css, ['sass'])
-  gulp.watch(paths.source_js, ['scripts'])
   gulp.watch([
     '_tools/*',
     '_includes/*',

@@ -1,0 +1,80 @@
+* {
+  font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+body {
+  text-align: center;
+  margin: 0;
+  background: #f7f7f7;
+  color: #4C4F51; }
+
+section {
+  background: white;
+  padding-bottom: 13px;
+  box-shadow: 0 3px 7px rgba(76, 79, 81, 0.03);
+  margin-bottom: 55px; }
+  section:last-of-type {
+    margin-bottom: 0; }
+
+ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 620px; }
+  @media (max-width: 620px) {
+    ul {
+      max-width: 496px; } }
+  @media (max-width: 496px) {
+    ul {
+      max-width: 372px; } }
+
+h2 {
+  text-transform: uppercase;
+  font-size: 80%;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: #7e8285; }
+
+li {
+  width: 124px;
+  margin: 11px 0; }
+  @media (max-width: 372px) {
+    li {
+      width: 33.33333%; } }
+  li .image {
+    height: 68px;
+    -webkit-transition: 0.1s cubic-bezier(0.5, 0.5, 0.5, 2);
+    transition: 0.1s cubic-bezier(0.5, 0.5, 0.5, 2);
+    text-align: left; }
+    li .image img {
+      position: relative;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: scale(0.5) translate(-100%, -100%);
+              transform: scale(0.5) translate(-100%, -100%); }
+  li .name {
+    font-size: 13px;
+    color: #4C4F51; }
+  li a:hover .image {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+
+#logo {
+  overflow: visible;
+  height: 54px;
+  margin: 25px 0; }
+  #logo circle {
+    stroke: #4C4F51;
+    fill: #4C4F51; }
+  #logo path {
+    fill: white; }
