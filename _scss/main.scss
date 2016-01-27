@@ -10,6 +10,11 @@ $color-gray: #4C4F51;
 
 a {
   text-decoration: none;
+  &:hover {
+    .image, #logo {
+      transform: scale(1.2);
+    }
+  }
 }
 
 body {
@@ -73,20 +78,13 @@ li {
     font-size: 13px;
     color: $color-gray;
   }
-
-  a {
-    &:hover {
-      .image {
-        transform: scale(1.2);
-      }
-    }
-  }
 }
 
 #logo {
   overflow: visible;
   height: 54px;
   margin: 25px 0;
+  transition: .1s $easing;
 
   circle {
     stroke: $color-gray;

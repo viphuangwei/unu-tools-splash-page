@@ -39,7 +39,7 @@ gulp.task('build', function(cb) {
 })
 
 gulp.task('watch', function() {
-  gulp.watch(paths.source_css, ['sass'])
+  gulp.watch(paths.source_scss, ['sass'])
   gulp.watch([
     '_tools/*',
     '_includes/*',
