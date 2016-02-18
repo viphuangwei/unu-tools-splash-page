@@ -16,6 +16,9 @@ tools:
   - name: "Personio"
     img:  "personio.png"
     url:  "http://unu.personio.de"
+  - name: "Confluence"
+    img:  "confluence.png"
+    url:  "http://unumotors.atlassian.net"
   - name: "Wrike"
     img:  "wrike.png"
     url:  "http://www.wrike.com"
@@ -58,9 +61,6 @@ tools:
 
 - name: "engineering"
   subcategories: 
-  - name: "Confluence"
-    img:  "confluence.png"
-    url:  "http://unumotors.atlassian.net"
   - name: "Github"
     img:  "github.png"
     url:  "http://github.com/unumotors"
@@ -116,7 +116,7 @@ tools:
 
           <li>
             <a href="{{ tool.url }}">
-              <div class="image"><img src="images/{{ tool.img }}" alt="{{ tool.name }}"></div>
+              <div class="image"><img src="/images/icons-assets/{{ tool.img }}" alt="{{ tool.name }}"></div>
               <div class="name">{{ tool.name }}</div>
             </a>
           </li>
